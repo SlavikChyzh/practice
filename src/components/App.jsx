@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
-export class App extends Component {
-  render() {
+export  App () {
+
     return <div>hello world</div>;
-  }
+
 }
