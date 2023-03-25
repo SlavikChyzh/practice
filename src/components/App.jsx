@@ -52,12 +52,12 @@ export const App = () => {
       {isLoading && <Loader />}
       <Button text={isListShow ? 'hide List' : 'show List'} clickHandler={showList} />
       <List movies={movies} deleteMovie={deleteItem} />
-      {movies.length !== 0 && <Button text={'load more...'} clickHandler={loadMore} />}
+      {movies.length !== 0 && <Button text={'Load more...'} clickHandler={loadMore} />}
     </div>
   );
 };
 
-// =============================================================
+// ================================================================
 
 // import { Component } from 'react';
 
