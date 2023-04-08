@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { fetchEventsByName } from '../Servis/Events';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams, Link, Outlet } from 'react-router-dom';
 
 const SearchPage = () => {
   const [event, setEvent] = useState([]);
@@ -29,11 +29,12 @@ const SearchPage = () => {
         {event.map(el => {
           return (
             <li key={el.id}>
-              <Link>{el.name}</Link>
+              <Link to={el.id}>{el.name}</Link>
             </li>
           );
         })}
       </ul>
+      <Outlet />
     </>
   );
 };

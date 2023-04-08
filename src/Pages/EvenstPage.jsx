@@ -1,24 +1,31 @@
 import { fetchEvents } from '../Servis/Events';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 
 const EventsPage = () => {
   const [events, setEvents] = useState([]);
+
+  const location = useLocation();
 
   useEffect(() => {
     fetchEvents().then(setEvents);
   }, []);
 
   return (
-    <ul>
-      {events.map(el => {
-        return (
-          <li key={el.id}>
-            <Link>{el.name}</Link>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <ul>
+        {events.map(el => {
+          return (
+            <li key={el.id}>
+              <Link to={el.id} state={{ from: location }}>
+                {el.name}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+      <Outlet />
+    </>
   );
 };
 
