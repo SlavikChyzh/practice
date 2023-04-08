@@ -7,7 +7,7 @@ const EventsPage = () => {
 
   useEffect(() => {
     fetchEvents().then(setEvents);
-  });
+  }, []);
 
   return (
     <ul>
