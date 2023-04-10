@@ -29,7 +29,7 @@ export const EventSubPage = () => {
       <p>genre: {classifications[0].genre.name}</p>
       <p>subgenre: {classifications[0].subGenre.name}</p>
       <Link to="details" state={location.state}>
-        More Details
+        More Details.
       </Link>
     </div>
   );
