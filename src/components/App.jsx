@@ -52,7 +52,7 @@ export class App extends Component {
           text={!isListShow ? 'show list' : 'hide List'}
           clickHandler={this.showList}
         />
-        <List movies={movies} />
+        {this.state.isListShow && <List movies={movies} />}
         {this.state.movies.length !== 0 && (
           <Button text={'load more...'} clickHandler={this.loadMore} />
         )}
