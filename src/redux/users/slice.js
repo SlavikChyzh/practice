@@ -9,8 +9,8 @@ const users = createSlice({
       state.isLoading = true;
     },
     [fetchAll.fulfilled](state, { payload }) {
-      state.isLoading = false;
       state.items = payload;
+      state.isLoading = false;
       state.error = null;
     },
     [fetchAll.rejected](state, { payload }) {
@@ -20,9 +20,9 @@ const users = createSlice({
       state.isLoading = true;
     },
     [fetchUser.fulfilled](state, { payload }) {
+      state.currentUser = payload;
       state.isLoading = false;
       state.error = null;
-      state.currentUser = payload;
     },
     [fetchUser.rejected](state, { payload }) {
       state.error = payload;
