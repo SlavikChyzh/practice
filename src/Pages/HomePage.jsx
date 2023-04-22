@@ -1,5 +1,3 @@
-const HomePage = () => {
-  return <p>Welcome to Home Page!</p>;
+export const HomePage = () => {
+  return <p>Welcome to user's app</p>;
 };
-
-export { HomePage };

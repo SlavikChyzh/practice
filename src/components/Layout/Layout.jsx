@@ -1,8 +1,7 @@
 import { Navigation } from 'components/Navigation/Navigation';
-
 import { Outlet } from 'react-router-dom';
 
-const Layout = () => {
+export const Layout = () => {
   return (
     <>
       <header>
@@ -14,5 +13,3 @@ const Layout = () => {
     </>
   );
 };
-
-export { Layout };

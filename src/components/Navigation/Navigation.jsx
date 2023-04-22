@@ -1,21 +1,16 @@
-import { StyledLink } from './Navigation.styled';
+import { StyledNavLink } from './Navigation.styled';
 
-const Navigation = () => {
+export const Navigation = () => {
   return (
     <nav>
       <ul>
         <li>
-          <StyledLink to="/">Home</StyledLink>
+          <StyledNavLink to="/">Home</StyledNavLink>
         </li>
         <li>
-          <StyledLink to="events">Events</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="search">Search</StyledLink>
+          <StyledNavLink to="users">Users</StyledNavLink>
         </li>
       </ul>
     </nav>
   );
 };
-
-export { Navigation };
