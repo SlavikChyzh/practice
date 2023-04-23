@@ -1,7 +1,7 @@
-import { HomePage } from '..//Pages/HomePage';
+import { HomePage } from '../pages/HomePage';
 import { Layout } from './Layout/Layout';
-import { UsersPage } from '../Pages/UsersPage';
-import { UserDetailsPage } from 'Pages/UserDetailsPage';
+import { UsersPage } from '../pages/UsersPage';
+import { UserDetailsPage } from 'pages/UserDetailsPage';
 
 const { Routes, Route } = require('react-router-dom');
 
