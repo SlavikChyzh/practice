@@ -13,7 +13,7 @@ export const Modal = ({ closeModal, id }) => {
 
   return (
     <div>
-      <p>Are you sure?</p>
+      <p>Are you sure ?</p>
       <button type="button" onClick={() => deleteCurrentUser(id)}>
         yes!
       </button>
