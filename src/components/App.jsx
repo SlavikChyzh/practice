@@ -1,4 +1,4 @@
-import { HomePage } from '../pages/HomePage';
+import { HomePage } from '../Pages/HomePage';
 import { Layout } from './Layout/Layout';
 import { UsersPage } from '../pages/UsersPage';
 import { UserDetailsPage } from 'pages/UserDetailsPage';
