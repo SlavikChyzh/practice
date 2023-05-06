@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { fetchUser } from 'redux/users/operations';
 import { selectUserInfo } from 'redux/users/selectors';
 import { Modal } from '../components/Modal';
@@ -37,6 +37,7 @@ export const UserDetailsPage = () => {
         <button type="button" onClick={() => setIdUser(id)}>
           delete
         </button>
+        <Link to='edit'>Edit user info</Link>
       </div>
       {idUser && <Modal id={idUser} closeModal={closeModal} />}
     </>

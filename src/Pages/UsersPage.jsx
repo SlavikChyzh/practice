@@ -9,16 +9,20 @@ export const UsersPage = () => {
   const users = useSelector(selectUsers);
 
   useEffect(() => {
+    console.log('fire')
     dispatch(fetchAll());
   }, [dispatch]);
 
   return (
-    <ul>
-      {users.map(({ name, id }) => (
-        <li key={id}>
-          <Link to={`${id}`}>{name}</Link>
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul>
+        {users.map(({ name, id }) => (
+          <li key={id}>
+            <Link to={`${id}`}>{name}</Link>
+          </li>
+        ))}
+      </ul>
+      <Link to="add">Add user</Link>
+    </>
   );
 };
